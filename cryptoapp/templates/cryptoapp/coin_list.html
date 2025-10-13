@@ -1,0 +1,25 @@
+{% extends 'cryptoapp\base.html' %}
+
+{% block content %}
+<h2>Top 10 Cryptocurrencies</h2>
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Price (USD)</th>
+        <th>Market Cap</th>
+    </tr>
+    {% for coin in coins %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ coin.name }}</td>
+        <td>${{ coin.current_price }}</td>
+        <td>${{ coin.market_cap }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="4">No data available</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
