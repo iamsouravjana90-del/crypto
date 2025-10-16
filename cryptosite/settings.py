@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-yo+2^43-hs9jcgi+f(_w)rv!+t36eo3ltpd70wi@x1h_0psp!v
 #DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['crypto.onrender.com', 'localhost', '127.0.0.1']
 
 # Authentication redirect after login
 LOGIN_URL = 'login'
